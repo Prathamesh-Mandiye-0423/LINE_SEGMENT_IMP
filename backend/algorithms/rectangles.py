@@ -24,10 +24,10 @@ def compute_valid_y_positions(red_segments: List[LineSegment])->float:
         if active_segments==0 and prev_y!=y:
             valid_y_pos.append((y))
 
-        if event_type=="START":
+        if event_type==1:
             # try with number instead
             active_segments+=1
-        elif event_type=="END":
+        elif event_type==-1:
             active_segments-=1
         prev_y=y
     # return valid_y_pos
@@ -50,10 +50,10 @@ def compute_valid_x_positions(red_segments: List[LineSegment])->List[float]:
         if active_segments==0 and prev_x!=x:
             valid_x_pos.append((x))
 
-        if event_type=="START":
+        if event_type==1:
             # try with number instead
             active_segments+=1
-        elif event_type=="END":
+        elif event_type==-1:
             active_segments-=1
         prev_x=x
     # return valid_x_pos
@@ -91,8 +91,8 @@ def horizontal_sweep(red_segments: List[LineSegment],
     best_r1=None
     best_r2=None
     for y in valid_y_positions:
-        Q1=[seg for seg in red_segments if seg.y_max()<=y]
-        Q2=[seg for seg in red_segments if seg.y_min()>=y]
+        Q1 = [seg for seg in red_segments if (seg.y_min() + seg.y_max()) / 2 <= y]
+        Q2 = [seg for seg in red_segments if (seg.y_min() + seg.y_max()) / 2 > y]
         if not Q1 or not Q2:
             continue
         R1=compute_bounding_rectangle(Q1)
@@ -122,8 +122,8 @@ def vertical_sweep(red_segments: List[LineSegment],
     best_r1=None
     best_r2=None
     for x in valid_x_positions:
-        Q1=[seg for seg in red_segments if seg.x_max()<=x]
-        Q2=[seg for seg in red_segments if seg.x_min()>=x]
+        Q1 = [seg for seg in red_segments if (seg.x_min() + seg.x_max()) / 2 <= x]
+        Q2 = [seg for seg in red_segments if (seg.x_min() + seg.x_max()) / 2 > x]
         if not Q1 or not Q2:
             continue
         R1=compute_bounding_rectangle(Q1)

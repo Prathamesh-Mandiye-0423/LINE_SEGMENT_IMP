@@ -116,7 +116,7 @@ class RangeTree2D:
                 'y_tree':sorted([points[0][1]], key=lambda y:y),
                 'segment_ids': [points[0][2]]
             }
-        mid = len(points)/2
+        mid = len(points)//2
         node = {
             'point': points[mid],
             'left': self._build_tree(points[:mid]),
@@ -200,7 +200,7 @@ class PrioritySearchTree:
         }
 
     def minquery(self,x_min:float,y_min:float)->Optional[Tuple[float,float,float]]:
-       return self._range_min_helper(self.root,x_min,y_min,y)
+       return self._range_min_helper(self.root,x_min,y_min)
 
     def _range_min_helper(self,node,x_min,y_min):
         if node is None:
