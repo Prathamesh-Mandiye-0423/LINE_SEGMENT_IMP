@@ -1,0 +1,144 @@
+.results {
+  background: white;
+  border-radius: 12px;
+  padding: 1.5rem;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  animation: slideIn 0.3s ease;
+}
+
+@keyframes slideIn {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.results h3 {
+  font-size: 1.3rem;
+  margin-bottom: 1rem;
+  color: #333;
+  font-weight: 600;
+  border-bottom: 2px solid #667eea;
+  padding-bottom: 0.5rem;
+}
+
+.result-summary {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+.stat {
+  background-color: #f8f9fa;
+  padding: 0.75rem;
+  border-radius: 8px;
+  border-left: 4px solid #667eea;
+}
+
+.stat label {
+  display: block;
+  font-size: 0.85rem;
+  color: #666;
+  margin-bottom: 0.25rem;
+}
+
+.stat .value {
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: #333;
+}
+
+.shapes-info {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+.shape-details {
+  background-color: #f8f9fa;
+  padding: 1rem;
+  border-radius: 8px;
+}
+
+.shape-details h4 {
+  font-size: 1rem;
+  margin-bottom: 0.75rem;
+  color: #333;
+  font-weight: 600;
+}
+
+.shape-details table {
+  width: 100%;
+  font-size: 0.9rem;
+}
+
+.shape-details td {
+  padding: 0.4rem 0;
+  border-bottom: 1px solid #e0e0e0;
+}
+
+.shape-details td:first-child {
+  font-weight: 500;
+  color: #666;
+  width: 40%;
+}
+
+.shape-details td:last-child {
+  color: #333;
+  font-family: 'Courier New', monospace;
+}
+
+.shape-details tr:last-child td {
+  border-bottom: none;
+}
+
+.complexity-info {
+  background: linear-gradient(135deg, #667eea15 0%, #764ba215 100%);
+  padding: 1rem;
+  border-radius: 8px;
+  border: 2px solid #667eea30;
+}
+
+.complexity-info h4 {
+  font-size: 1rem;
+  margin-bottom: 0.75rem;
+  color: #333;
+  font-weight: 600;
+}
+
+.complexity-info p {
+  font-size: 0.9rem;
+  color: #555;
+  line-height: 1.6;
+  margin-bottom: 0.5rem;
+}
+
+.complexity-info .complexity {
+  background-color: #fff;
+  padding: 0.75rem;
+  border-radius: 6px;
+  margin-top: 0.75rem;
+  border-left: 4px solid #667eea;
+}
+
+.complexity-info code {
+  font-family: 'Courier New', monospace;
+  background-color: #f0f0f0;
+  padding: 0.25rem 0.5rem;
+  border-radius: 4px;
+  color: #667eea;
+  font-weight: 600;
+}
+
+@media (max-width: 768px) {
+  .result-summary,
+  .shapes-info {
+    grid-template-columns: 1fr;
+  }
+}
