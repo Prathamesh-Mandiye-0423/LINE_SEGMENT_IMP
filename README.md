@@ -2,7 +2,7 @@
 
 Implementation of algorithms for computing two disjoint axis-parallel rectangles/squares that separate bichromatic line segments, based on the asymmetric separation problem from computational geometry.
 
-## 📚 Research Background
+##  Research Background
 
 <!-- This project implements algorithms from Section 6.5.3 and 6.5.4 of computational geometry research on asymmetric separation problems for bichromatic point and line segment sets. -->
 
@@ -52,12 +52,6 @@ line-segment-separator/
 ```
 
 ## 🚀 Getting Started
-
-### Prerequisites
-
-- Python 3.8+
-- Node.js 16+
-- npm or yarn
 
 ### Backend Setup
 
@@ -237,10 +231,8 @@ Contributions are welcome! Areas for improvement:
 - Visualization enhancements
 - Performance optimizations
 
-## 📄 License
 
-MIT License - Feel free to use for research and educational purposes.
 
-## 🙏 Acknowledgments
+##  Acknowledgments
 
 Based on research in asymmetric separation problems for bichromatic geometric objects.
