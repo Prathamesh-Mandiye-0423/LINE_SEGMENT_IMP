@@ -27,7 +27,7 @@ Find: Two disjoint axis-parallel rectangles/squares whose union covers all red s
    - Space Complexity: O(m log m + n)
    - Uses Priority Search Trees for efficient range minimum queries
 
-## 🏗️ Architecture
+## Architecture
 
 ```
 line-segment-separator/
@@ -51,7 +51,7 @@ line-segment-separator/
 └── README.md
 ```
 
-## 🚀 Getting Started
+## Getting Started
 
 ### Backend Setup
 
@@ -90,7 +90,7 @@ npm run dev
 
 Frontend will run on `http://localhost:3000`
 
-## 📖 Usage
+## Usage
 
 ### Drawing Segments
 
@@ -120,7 +120,7 @@ Frontend will run on `http://localhost:3000`
 - **Clear Color**: Remove all segments of selected color
 - **Clear All**: Reset the entire canvas
 
-## 🔬 Algorithm Details
+##  Algorithm Details
 
 ### Valid Separator Positions
 
@@ -150,7 +150,7 @@ Used for efficient segment counting:
 - **Query**: Count segments fully contained in a rectangle
 - **Time**: O(log² m) per query
 
-## 📊 Performance
+##  Performance
 
 ### Complexity Comparison
 
@@ -196,7 +196,7 @@ Used for efficient segment counting:
 }
 ```
 
-## 🎓 Research References
+##  Research References
 
 This implementation is based on research in computational geometry, specifically:
 
@@ -205,12 +205,7 @@ This implementation is based on research in computational geometry, specifically
 - **Priority Search Trees**: For 3-sided range queries (McCreight, 1985)
 - **2D Range Trees**: For orthogonal range searching
 
-## 🐛 Troubleshooting
-
-### Backend won't start
-- Ensure Python 3.8+ is installed
-- Check if port 5000 is available
-- Verify all dependencies are installed
+##  Troubleshooting
 
 ### Frontend won't start
 - Ensure Node.js 16+ is installed
@@ -221,7 +216,7 @@ This implementation is based on research in computational geometry, specifically
 - Ensure backend is running before frontend
 - Check proxy configuration in `vite.config.js`
 
-## 🤝 Contributing
+## Contributing
 
 Contributions are welcome! Areas for improvement:
 
