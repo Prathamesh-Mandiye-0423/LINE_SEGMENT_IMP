@@ -107,7 +107,7 @@ const Results = ({ result, algorithmType }) => {
           <strong>Red segments (n):</strong> {result.total_red_segments}<br/>
           <strong>Blue segments (m):</strong> {result.total_blue_segments}
         </p>
-        {algorithmType === 'rectangles' ? (
+        {/* {algorithmType === 'rectangles' ? (
           <p className="complexity">
             Time Complexity: <code>O(nm) = O({result.total_red_segments} × {result.total_blue_segments})</code>
           </p>
@@ -115,7 +115,7 @@ const Results = ({ result, algorithmType }) => {
           <p className="complexity">
             Time Complexity: <code>O(nm log m) = O({result.total_red_segments} × {result.total_blue_segments} × log {result.total_blue_segments})</code>
           </p>
-        )}
+        )} */}
       </div>
     </div>
   );
