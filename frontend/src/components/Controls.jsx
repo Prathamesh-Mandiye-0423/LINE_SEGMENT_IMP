@@ -57,7 +57,7 @@ const Controls = ({
               onChange={(e) => setAlgorithmType(e.target.value)}
             />
             <span>Two Squares</span>
-            <small>O(nm log m) time</small>
+            <small>O(nm^2 + n^2) time</small>
           </label>
         </div>
       </div>
