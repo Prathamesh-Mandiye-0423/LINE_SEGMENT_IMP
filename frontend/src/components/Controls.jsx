@@ -47,7 +47,7 @@ const Controls = ({
               onChange={(e) => setAlgorithmType(e.target.value)}
             />
             <span>Two Rectangles</span>
-            <small>O(nm) time</small>
+            <small>O(n^2+nm) time</small>
           </label>
           <label>
             <input
@@ -73,7 +73,7 @@ const Controls = ({
                 onChange={(e) => setUsePST(e.target.checked)}
               />
               <span>Use Priority Search Tree</span>
-              <small>{usePST ? 'O(nm log m)' : 'O(nm²)'}</small>
+              <small>{'O(nm^2 + n^2)'}</small>
             </label>
           </div>
         </div>
